@@ -1,0 +1,9 @@
+(define (reverse-comp comp)
+(if (comp 0 1) > <)
+)
+(define (is-up-down? list comp)
+  (if (or (null? list) (< (length list) 2)) '(#t)
+  (and (comp (car list) (cadr list)) (is-up-down? (cdr list) (reverse-comp comp)))
+  )
+
+)
