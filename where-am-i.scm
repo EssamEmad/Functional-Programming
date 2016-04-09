@@ -222,3 +222,20 @@
   )
   )
 )
+
+
+;; distance-product
+
+(define (distance-product point list)
+
+(apply *  (map (lambda (secondPoint)
+    (let ((distance (dist point secondPoint)))
+      (if (= distance 0) 1
+        distance
+      )
+    )
+
+  )  list))
+
+
+)
